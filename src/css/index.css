@@ -1,0 +1,87 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans.ttf);
+}
+@font-face {
+  font-family: OdorMeanChey;
+  src: url(../fonts/OdorMeanChey-Regular.ttf);
+}
+:root {
+  --light: #fff;
+  --dark: #2C2C2C;
+  --grey-light: #f9f9f9;
+  --grey-1: #6d6d6d;
+  --grey-2: #343434;
+  --grey-3: #d9d9d9;
+  --grey-4: #f2f2f2;
+  --purple-1: #5E60CE;
+  --purple-1-hover: #7577e2;
+  --purple-2: #595BDE;
+  --blue-1: #56CFE1;
+  --green-1: #4EDE90;
+  font-size: 1vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "OpenSans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 1.9rem;
+}
+
+h2 {
+  font-size: 1.9rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--grey-1);
+}
+
+.reveal {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  transform: translateX(-50px);
+}
+
+.active {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+button, .submit-btn {
+  width: 100%;
+  background: var(--purple-1);
+  font-size: 1vw;
+  font-weight: bold;
+  color: var(--light);
+  padding: 0.7rem 0;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+button:hover, .submit-btn:hover {
+  background: var(--purple-1-hover);
+  transform: translateY(-5px);
+}
+
+.section-header {
+  font-family: "OdorMeanChey", serif;
+  font-size: 3rem;
+}
+.section-header span {
+  font-family: "OdorMeanChey", serif;
+}/*# sourceMappingURL=index.css.map */

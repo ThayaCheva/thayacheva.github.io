@@ -1,0 +1,37 @@
+#footer {
+  background: var(--dark);
+  padding: 2rem;
+}
+#footer .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+#footer .social-media a {
+  background: var(--grey-2);
+  width: 3.5vw;
+  height: 3.5vw;
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer .social-media a:hover {
+  background: var(--purple-1);
+}
+#footer .social-media a .icons {
+  width: 50%;
+  height: 50%;
+  transition: all 0.1s ease-in-out;
+}
+#footer p {
+  color: var(--grey-1);
+}
+#footer p span {
+  cursor: pointer;
+}
+#footer p span:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=footer.css.map */

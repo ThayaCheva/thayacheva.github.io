@@ -1,0 +1,65 @@
+#contact {
+  background: var(--grey-light);
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#contact .title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#contact .title .section-header span {
+  color: var(--purple-1);
+}
+#contact .title .section-description {
+  max-width: 40vw;
+}
+#contact form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 900px;
+  margin-top: 2.5rem;
+}
+#contact form label {
+  text-align: left;
+  width: 100%;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--grey-1);
+}
+#contact form input, #contact form textarea {
+  border-radius: 50px;
+  border: 1px solid var(--grey-3);
+  background: var(--grey-4);
+  padding: 0.5rem 1rem;
+  width: 900px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+#contact form input:focus, #contact form textarea:focus {
+  border: 2px solid var(--purple-1);
+  outline: none;
+}
+#contact form textarea {
+  height: 250px;
+  border-radius: 15px;
+}
+#contact form .submit-btn {
+  background: var(--purple-1);
+  padding: 1rem;
+  color: var(--light);
+  font-weight: bold;
+  border-radius: 15px;
+  font-size: 1vw;
+  width: 25%;
+  align-self: end;
+}
+#contact form .submit-btn:hover {
+  background: var(--purple-1-hover);
+  transform: translateY(-5px);
+}/*# sourceMappingURL=contact.css.map */

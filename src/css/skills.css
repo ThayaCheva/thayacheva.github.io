@@ -1,0 +1,62 @@
+#skills {
+  background: var(--dark);
+  padding: 5rem 10rem;
+}
+#skills .section-header {
+  color: var(--light);
+  font-weight: normal;
+}
+#skills .section-header span {
+  color: var(--blue-1);
+}
+#skills .skills-container {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+#skills .skills-container .skills-item {
+  width: 100%;
+  margin-top: 5rem;
+}
+#skills .skills-container .skills-item .skills-header {
+  margin-bottom: 1rem;
+}
+#skills .skills-container .skills-item .skills-item-container {
+  padding: 1.5rem;
+  border-radius: 50px;
+  background: var(--grey-2);
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+}
+#skills .skills-container .skills-item .skills-item-container p {
+  border-radius: 50px;
+  max-width: 10vw;
+  font-weight: bold;
+  color: var(--light);
+  padding: 0.5rem 1rem;
+}
+#skills .skills-container .skills-item:first-child .skills-header {
+  color: var(--blue-1);
+}
+#skills .skills-container .skills-item:first-child .skills-item-container p {
+  background: var(--blue-1);
+  color: var(--light);
+}
+#skills .skills-container .skills-item:nth-child(2) .skills-header {
+  color: var(--purple-2);
+}
+#skills .skills-container .skills-item:nth-child(2) .skills-item-container p {
+  background: var(--purple-2);
+  color: var(--light);
+}
+#skills .skills-container .skills-item:last-child .skills-header {
+  color: var(--green-1);
+}
+#skills .skills-container .skills-item:last-child .skills-item-container p {
+  background: var(--green-1);
+  color: var(--light);
+}/*# sourceMappingURL=skills.css.map */
