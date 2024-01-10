@@ -5,16 +5,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 function Project() {
     var settings = {
-        dots: true,
-        focusOnSelect: true,
         className: "center",
         centerMode: true,
-        centerPadding: 0,
         infinite: true,
-        speed: 500,
+        centerPadding: "10px",
         slidesToShow: 3,
-        slidesToScroll: 3,
-        arrows: false
+        speed: 500,
+        focusOnSelect: true,
     };
   return (
     <section id="project">
@@ -28,40 +25,28 @@ function Project() {
                     <div className="project-item-image">
                         <img src={require("./images/lunala.jpg")} alt="project-image"></img>
                     </div>
-                    <div className="project-item-content">
-                        <h3>Lunala and the Celestial Tower</h3>
-                        <p>Game Development</p>
-                    </div>
+
                 </div>
                 <div className="project-item">
                     <div className="project-item-image">
                         <img src={require("./images/textdna.png")} alt="project-image"></img>
                     </div>
-                    <div className="project-item-content">
-                        <h3>TextDNA</h3>
-                        <p>Web Development</p>
-                    </div>
+                    
                 </div>
                 <div className="project-item">
                     <div className="project-item-image">
                         <img src={require("./images/lastbite.png")} alt="project-image"></img>
                     </div>
-                    <div className="project-item-content">
-                        <h3>LastBite</h3>
-                        <p>Web Development</p>
-                    </div>
+                    
                 </div>
                 <div className="project-item">
                     <div className="project-item-image">
                         <img src={require("./images/abyss.png")} alt="project-image"></img>
                     </div>
-                    <div className="project-item-content">
-                        <h3>Abyss Guide</h3>
-                        <p>Web Development</p>
-                    </div>
+                    
                 </div>
             </Slider>
-            
+            <p className="nav-info">Swipe, click or use arrow keys to navigate.</p>
         </div>
     </section>
   );

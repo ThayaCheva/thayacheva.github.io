@@ -10,6 +10,7 @@
   margin-bottom: 1rem;
 }
 #footer .social-media a {
+  transition: all 0.2s ease;
   background: var(--grey-2);
   width: 3.5vw;
   height: 3.5vw;
@@ -20,6 +21,7 @@
 }
 #footer .social-media a:hover {
   background: var(--purple-1);
+  transform: translateY(-10px);
 }
 #footer .social-media a .icons {
   width: 50%;

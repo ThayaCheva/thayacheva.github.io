@@ -1,6 +1,6 @@
 #project {
     background: var(--light);
-    padding: 5rem;
+    padding: 5rem 0;
     .title {
         display: flex;
         align-items: center;
@@ -15,33 +15,23 @@
         }
     }
     .project-container {
-        .slick-slide {
-            padding: 1rem;
-        }
-        .slick-prev, .slick-next {
-            z-index: 999;
-            background: var(--dark);
-        }
-        .slick-prev {
-            left: 5px !important;
-        }
-        .slick-next {
-            right: 5px !important;
-        }
-        .slick-dots {
-            transform: translateY(25px);
-        }
         .slick-dots li.slick-active button:before {
             color: var(--purple-1);
         }
         .slick-slide {
+            position: relative;
             transition: all 0.2s ease-in-out;
         }
         .slick-slide.slick-center {
-            transform: scale(1.2);
+            transform: scale(1.1);
+        }
+        .nav-info {
+            color: #bbbbbb;
+            font-size: 0.8rem;
+            transform: translateY(30px);
         }
         gap: 1rem;
-        margin-top: 5rem;
+        margin-top: 2rem;
         .project-item {
             width: 480px;
             transition: all 0.05s ease-in-out;
@@ -49,10 +39,10 @@
             cursor: pointer;
             .project-item-image {
                 img {
-                    height: 10.5vw;
-                    width: 480px;
+                    width: 50vw;
+                    height: 18vw;
                     border: 1px solid var(--grey-3);
-                    border-radius: 15px 15px 0px 0px;
+                    border-radius: 10px;
                     object-fit: fill;
                     width: 100%;
                 }

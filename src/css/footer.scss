@@ -8,8 +8,10 @@
         gap: 2rem;
         margin-bottom: 1rem;
         a {
+            transition: all 0.2s ease;
             &:hover {
                 background: var(--purple-1);
+                transform: translateY(-10px);
             }
             background: var(--grey-2);
             width: 3.5vw;

@@ -1,4 +1,10 @@
 import './App.css';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCheck,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 import Navbar from './Navbar.js'
 import Hero from './Hero.js'
 import About from './About.js'
@@ -23,15 +29,41 @@ function App() {
       }
     }
   }
+
+  function revealAction() {
+    var reveals = document.querySelectorAll(".alert");
+    reveals[0].classList.add("alert-reveal");
+    setTimeout(function () {
+      reveals[0].classList.remove("alert-reveal");
+    }, 2000);
+  }
+
+  function manageAlert(text, type) {
+    setAlertValue({ text: text, type: type });
+    revealAction(); 
+  }
+
+  const [alertValue, setAlertValue] = React.useState({ text: "", type: "" });
   return (
     <div className="App">
+      <div className={`alert`}>
+        <div className={`${alertValue.type}`}>
+          {alertValue.text}{" "}
+          {alertValue.type == "success" ? (
+            <FontAwesomeIcon icon={faCheck} />
+          ) : (
+            <FontAwesomeIcon icon={faXmark} />
+          )}
+        </div>
+      </div>
+
       <Navbar/>
       <Hero/>
       <About/>
       <Skills/>
       <Project/>
-      <Contact/>
-      <Footer/>
+      <Contact manageAlert={manageAlert}/>
+      <Footer manageAlert={manageAlert}/>
     </div>
   );
 }

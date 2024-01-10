@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import './css/footer.css';
 
-function Footer() {
+function Footer(props) {
   return (
     <section id="footer">
         <div className="social-media">
@@ -11,7 +11,7 @@ function Footer() {
             <a href="https://github.com/ThayaCheva" target="_blank"><FontAwesomeIcon className="icons" icon={faGithub}/></a>
             <a href="" target="_blank"><FontAwesomeIcon className="icons" icon={faInstagram}/></a>
         </div>
-        <p>Thaya Chevaphatrakul ©2023 | <span onClick={() => {navigator.clipboard.writeText("thayajjj@gmail.com")}}>thayajjj@gmail.com</span></p>
+        <p>Thaya Chevaphatrakul ©2023 | <span onClick={() => {navigator.clipboard.writeText("thayajjj@gmail.com"); props.manageAlert("Copied to clipboard!", "success");}}>thayajjj@gmail.com</span></p>
     </section>
   );
 }

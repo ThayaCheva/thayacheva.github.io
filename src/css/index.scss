@@ -21,6 +21,7 @@
   --purple-2: #595BDE;
   --blue-1: #56CFE1;
   --green-1: #4EDE90;
+  --red-1: #f27d9f;
   font-size: 1vw;
 }
 
@@ -63,6 +64,15 @@ p {
   transform: translateX(0px);
 }
 
+.cursor {
+  animation:
+    cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% { opacity: 0}
+}
+
 button, .submit-btn {
   width: 100%;
   background:var(--purple-1);
@@ -80,10 +90,38 @@ button, .submit-btn {
   }
 }
 
-.section-header {
-  font-family: 'OdorMeanChey', serif;
-  font-size: 3rem;
-  span {
-    font-family: 'OdorMeanChey', serif;
+.alert {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-weight: bold;
+  margin: 1.5rem 2rem;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all 0.4s ease-in;
+  z-index: 99999;
+  .success {
+      background: var(--green-1);
+      color: var(--light);
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      border: 1px solid var(--green-1);
   }
+  .fail {
+      background: var(--red-1);
+      color: var(--light);
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      border: 1px solid var(--red-1);
+  }
+}
+.alert-reveal {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+
+.section-header {
+  text-transform: uppercase;
+  font-size: 3rem;
 }
