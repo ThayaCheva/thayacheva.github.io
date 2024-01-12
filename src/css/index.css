@@ -8,17 +8,18 @@
 }
 :root {
   --light: #fff;
-  --dark: #2C2C2C;
+  --dark: #222222;
   --grey-light: #f9f9f9;
   --grey-1: #6d6d6d;
-  --grey-2: #343434;
+  --grey-2: #2a2a2a;
   --grey-3: #d9d9d9;
   --grey-4: #f2f2f2;
-  --purple-1: #5E60CE;
+  --purple-1: #7D12FF;
   --purple-1-hover: #7577e2;
   --purple-2: #595BDE;
-  --blue-1: #56CFE1;
-  --green-1: #4EDE90;
+  --blue-1: #41d4ea;
+  --green-1: #28d576;
+  --green-1-hover: #37c477;
   --red-1: #f27d9f;
   font-size: 1vw;
 }
@@ -53,7 +54,7 @@ p {
 
 .reveal {
   opacity: 0;
-  transition: all 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
   transform: translateX(-50px);
 }
 
@@ -117,6 +118,20 @@ button:hover, .submit-btn:hover {
 .alert-reveal {
   transform: translateY(0px);
   opacity: 1;
+}
+
+.title {
+  position: relative;
+}
+.title::before {
+  position: absolute;
+  content: "";
+  -o-object-fit: center;
+     object-fit: center;
+  transform: translateY(150px);
+  width: 50px;
+  height: 5px;
+  background: var(--blue-1);
 }
 
 .section-header {

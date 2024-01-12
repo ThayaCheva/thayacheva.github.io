@@ -1,12 +1,13 @@
 nav {
   z-index: 999;
-  position: absolute;
+  position: fixed;
   width: 100%;
   font-family: "Open Sans Condensed";
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 10rem;
+  background: var(--dark);
 }
 nav .nav-logo {
   color: var(--light);
@@ -25,6 +26,9 @@ nav .nav-menu .nav-menu-container {
   align-items: center;
   justify-content: space-between;
   list-style: none;
+}
+nav .nav-menu .nav-menu-container li .active {
+  background: red;
 }
 nav .nav-menu .nav-menu-container li a {
   position: relative;

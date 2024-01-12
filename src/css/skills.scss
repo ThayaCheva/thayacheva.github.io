@@ -1,21 +1,36 @@
 #skills {
     background: var(--dark);
-    padding: 5rem 10rem;
+    padding: 3rem 10rem;
     .section-header {
         color: var(--light);
-        font-weight: normal;
-
         span {
             color: var(--blue-1);
         }
     }
-    .skills-container {
-        margin-bottom: 2.5rem;
+    .title {
         display: flex;
-        // align-items: center;
+        align-items: center;
+        flex-direction: column;
+        &::before {
+            transform: translateY(120px);
+        }
+    }
+    .skills-container {
+        margin-top: 5rem;
+        display: flex;
         justify-content: center;
         gap: 3rem;
         .skills-box {
+            width: 25vw;
+            border-radius: 1rem;
+            padding: 2rem 1rem;
+            background: var(--grey-2);
+            border: 1px solid #222222;
+            height: 15vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
             &:first-child {
                 transition-delay: 0ms;
             }
@@ -25,73 +40,86 @@
             &:last-child {
                 transition-delay: 400ms;
             }
-            width: 25vw;
-            margin-top: 5rem;
-            border-radius: 1rem;
-            padding: 2rem 1rem;
-            background: var(--grey-2);
-            border: 1px solid #222222;
-            height: 100%;
             .skills-items {
                 position: relative;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: space;
                 flex-wrap: wrap;
                 gap: 1rem;
                 margin-top: 0.5rem;
-                // background: red;
                 width: 100%;
-                height: 100%;
                 cursor: default;
             }
             h2 {
-                font-size: 1.8rem;
-                position: relative;
-                top: -25px;
-                left: -50px;
-                width: 60%;
-                border-radius: 50px;
+                text-align: left;
+                width: 100%;
                 color: var(--light);
-                text-align: center;
-            }
+                font-weight: normal;
+                position: relative;
+                font-size: 1.5rem;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: 120%;
+                    left: 0;
+                    width: 3vw;
+                    height: 0.3vw;
+                }
+                margin-bottom: 2rem;
+            } 
             p {
-                color: var(--grey-3);
-                border-radius: 50px;
-                min-width: 4vw;
+                background: var(--dark);
                 padding: 0.5rem 1rem;
-                font-weight: bold;
+                border-radius: 5px;
+                transition: all 0.2s ease;
+                &:hover {
+                    background: #252525;
+                }
+            }
+            .icon-container {
+                position: absolute;
+                top: 10%;
+                left: 25%;
+                color: #272727;
+                .icon {
+                    width: 12vw;
+                    height: 12vw;
+                }
             }
             &:first-child {
                 h2 {
-                    background: var(--blue-1);
+                    &::before {
+                        background: var(--blue-1);
+                    }
                 }
                 p {
-                    border: 2px solid var(--blue-1);
                     &:hover {
-                        background: var(--blue-1);
+                        color: var(--blue-1);
                     }
                 }
             }
             &:nth-child(2) {
                 h2 {
-                    background: var(--purple-1);
+                    &::before {
+                        background: var(--purple-1);
+                    }
                 }
                 p {
-                    border: 2px solid var(--purple-1);
                     &:hover {
-                        background: var(--purple-1);
+                        color: var(--purple-1);
                     }
                 }
             }
             &:last-child {
                 h2 {
-                    background: var(--green-1);
+                    &::before {
+                        background: var(--green-1);
+                    }
                 }
                 p {
-                    border: 2px solid var(--green-1);
                     &:hover {
-                        background: var(--green-1);
+                        color: var(--green-1);
                     }
                 }
             }

@@ -11,17 +11,20 @@
   flex-direction: column;
 }
 #contact .title .section-header span {
-  color: var(--purple-1);
+  color: var(--green-1);
 }
 #contact .title .section-description {
   max-width: 40vw;
+}
+#contact .title::before {
+  background: var(--green-1);
 }
 #contact form {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 900px;
+  width: 47.5vw;
   margin-top: 2.5rem;
 }
 #contact form label {
@@ -37,20 +40,20 @@
   border: 1px solid var(--grey-3);
   background: var(--grey-4);
   padding: 0.5rem 1rem;
-  width: 900px;
+  width: 47.5vw;
   font-size: 0.8rem;
   margin-bottom: 1rem;
 }
 #contact form input:focus, #contact form textarea:focus {
-  border: 2px solid var(--purple-1);
+  border: 2px solid var(--green-1);
   outline: none;
 }
 #contact form textarea {
-  height: 250px;
+  height: 15vw;
   border-radius: 15px;
 }
 #contact form .submit-btn {
-  background: var(--purple-1);
+  background: var(--green-1);
   padding: 1rem;
   color: var(--light);
   font-weight: bold;
@@ -60,6 +63,6 @@
   align-self: end;
 }
 #contact form .submit-btn:hover {
-  background: var(--purple-1-hover);
+  background: var(--green-1-hover);
   transform: translateY(-5px);
 }/*# sourceMappingURL=contact.css.map */

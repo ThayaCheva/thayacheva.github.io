@@ -1,12 +1,13 @@
 nav {
     z-index: 999;
-    position: absolute;
+    position: fixed;
     width: 100%;
     font-family: 'Open Sans Condensed';
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 10rem;
+    background: var(--dark);
     .nav-logo {
         color: var(--light);
         font-weight: 300;
@@ -24,6 +25,10 @@ nav {
             justify-content: space-between;
             list-style: none;
             li {
+                .active{
+                    background: red;
+                }
+                
                 a {
                     position: relative;
                     color: var(--light);
