@@ -16,8 +16,8 @@
   --grey-2: #2a2a2a;
   --grey-3: #d9d9d9;  
   --grey-4: #f2f2f2;
-  --purple-1: #7D12FF;
-  --purple-1-hover: #7577e2;
+  --purple-1: #9142f0;
+  --purple-1-hover: #863de0;
   --purple-2: #595BDE;
   --blue-1: #41d4ea;
   --green-1: #28d576;
@@ -88,6 +88,27 @@ button, .submit-btn {
   &:hover {
       background: var(--purple-1-hover);
       transform: translateY(-5px);
+  }
+}
+
+.load-screen {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--light);
+  z-index: 999;
+  animation-name: loading;
+  animation-duration: 1s;
+}
+
+@keyframes loading{
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 

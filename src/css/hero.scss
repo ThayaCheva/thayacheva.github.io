@@ -1,5 +1,129 @@
 #hero {
-    background: #333;
+    background: var(--dark);
     width: 100%;
     height: 50vw;
+    position: relative;
+    .social-media {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 2rem;
+        padding: 2.5rem;
+        a {
+            z-index: 999;
+            transition: all 0.2s ease;
+            &:hover {
+                transform: translateY(-10px);
+                .icons {
+                    animation: iconSpin;
+                    animation-duration: 1s;
+                    
+                }
+            }
+            &:first-child {
+                &:hover {
+                    background: var(--blue-1);
+                }
+            }
+            &:nth-child(2) {
+                &:hover {
+                    background: var(--purple-1);
+                }
+            }
+            &:last-child {
+                &:hover {
+                    background: var(--green-1);
+                }
+            }
+            background: var(--grey-2);
+            width: 3.5vw;
+            height: 3.5vw;
+            color: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            .icons {
+                width: 50%;
+                height: 50%;
+                transition: all 0.1s ease-in-out;
+            }
+        }
+        
+    }
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        color: var(--light);
+        a {
+            button {
+                padding: 1rem;
+                margin-top: 1rem;
+            }
+        }
+        h1 {
+            font-size: 5rem;
+        }
+        .last-name {
+            padding-right: 1rem;
+            border-right: 5px solid var(--light);
+            animation:
+                cursor .4s step-end infinite alternate;
+        }
+        h3 {
+            font-weight: normal;
+            span {
+                &:first-child {
+                    color: var(--blue-1);
+                }
+                &:last-child {
+                    color: var(--green-1);
+                }
+            }
+        }
+    }
+    .lottie-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.25;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .lottie {
+            width: 50vw;
+        }
+    }
+}
+
+@keyframes cursor {
+    50% {border-color: transparent}
+}
+
+@keyframes iconSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+    80% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }

@@ -1,5 +1,117 @@
 #hero {
-  background: #333;
+  background: var(--dark);
   width: 100%;
   height: 50vw;
+  position: relative;
+}
+#hero .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 2.5rem;
+}
+#hero .social-media a {
+  z-index: 999;
+  transition: all 0.2s ease;
+  background: var(--grey-2);
+  width: 3.5vw;
+  height: 3.5vw;
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#hero .social-media a:hover {
+  transform: translateY(-10px);
+}
+#hero .social-media a:hover .icons {
+  animation: iconSpin;
+  animation-duration: 1s;
+}
+#hero .social-media a:first-child:hover {
+  background: var(--blue-1);
+}
+#hero .social-media a:nth-child(2):hover {
+  background: var(--purple-1);
+}
+#hero .social-media a:last-child:hover {
+  background: var(--green-1);
+}
+#hero .social-media a .icons {
+  width: 50%;
+  height: 50%;
+  transition: all 0.1s ease-in-out;
+}
+#hero .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  color: var(--light);
+}
+#hero .header a button {
+  padding: 1rem;
+  margin-top: 1rem;
+}
+#hero .header h1 {
+  font-size: 5rem;
+}
+#hero .header .last-name {
+  padding-right: 1rem;
+  border-right: 5px solid var(--light);
+  animation: cursor 0.4s step-end infinite alternate;
+}
+#hero .header h3 {
+  font-weight: normal;
+}
+#hero .header h3 span:first-child {
+  color: var(--blue-1);
+}
+#hero .header h3 span:last-child {
+  color: var(--green-1);
+}
+#hero .lottie-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hero .lottie-container .lottie {
+  width: 50vw;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes iconSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }/*# sourceMappingURL=hero.css.map */

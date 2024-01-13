@@ -58,7 +58,7 @@ function App() {
       </div>
 
       <Navbar/>
-      <Hero/>
+      <Hero manageAlert={manageAlert}/>
       <About/>
       <Skills/>
       <Project/>

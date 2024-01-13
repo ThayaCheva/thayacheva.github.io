@@ -8,7 +8,7 @@ function Navbar() {
       let currentSection = ''
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top <= 50 && rect.bottom >= 50) {
+        if (rect.top <= 100 && rect.bottom >= 100) {
           currentSection = section.id;
         }
       });
@@ -21,11 +21,10 @@ function Navbar() {
   }, []);
   return (
     <nav>
-      <h1 className="nav-logo">{`<Thaya/Cheva>`}</h1>
       <div className="nav-menu">
             <ul className="nav-menu-container">
-            <li><a className={activeSection === 'home' ? 'active' : ''}href="#hero">HOME</a></li>
             <li><a className={activeSection === 'about' ? 'active' : ''}href="#about">ABOUT</a></li>
+            <li><a className={activeSection === 'skills' ? 'active' : ''}href="#skills">SKILLS</a></li>
             <li><a className={activeSection === 'project' ? 'active' : ''}href="#project">PROJECTS</a></li>
             <li><a className={activeSection === 'contact' ? 'active' : ''}href="#contact">CONTACT</a></li>
             </ul>
