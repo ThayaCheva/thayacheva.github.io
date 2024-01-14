@@ -5,25 +5,11 @@ import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode, faLaptopCode, faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
 
-const TypingAnimation = ({ text, speed }) => {
-    const [visibleChars, setVisibleChars] = React.useState(0);
-    React.useEffect(() => {
-        const intervalId = setInterval(() => {
-        setVisibleChars((prevVisibleChars) =>
-            prevVisibleChars < text.length ? prevVisibleChars + 1 : prevVisibleChars
-        );
-        }, speed);
-    
-        return () => clearInterval(intervalId);
-    }, [text, speed]);
-    return <span>{text.slice(0, visibleChars)}</span>;
-};
-
 function Skills() {
 
     return (
     <section id="skills">
-        <div className="title">
+        <div className="title reveal">
             <h1 className="section-header">My <span>Skills</span></h1>
             <p>A list of languages and tools I usually use or am familiar with.</p>
         </div>

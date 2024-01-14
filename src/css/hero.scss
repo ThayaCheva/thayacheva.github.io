@@ -1,8 +1,18 @@
 #hero {
     background: var(--dark);
     width: 100%;
-    height: 50vw;
+    height: 100vh;   
     position: relative;
+    overflow: hidden;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        background: #151515;
+        width: 50%;
+        height: 100%;
+    }
     .social-media {
         display: flex;
         align-items: center;
@@ -20,20 +30,42 @@
                     
                 }
             }
+            &::before {
+                position: absolute;
+                content: "";
+                object-fit: center;
+                transform: translateY(2.5vw);
+                width: 3vw;
+                height: 0.3vw;
+            }
+            animation-name: dropdown;
             &:first-child {
+                &::before {
+                    background: var(--blue-1);
+                }
                 &:hover {
                     background: var(--blue-1);
                 }
+                animation-duration: 1.2s;
+
             }
             &:nth-child(2) {
+                &::before {
+                    background: var(--purple-1);
+                }
                 &:hover {
                     background: var(--purple-1);
                 }
+                animation-duration: 1.4s;
             }
             &:last-child {
+                &::before {
+                    background: var(--green-1);
+                }
                 &:hover {
                     background: var(--green-1);
                 }
+                animation-duration: 1.6s;
             }
             background: var(--grey-2);
             width: 3.5vw;
@@ -66,19 +98,16 @@
         a {
             button {
                 padding: 1rem;
-                margin-top: 1rem;
+                margin-top: 2rem;
             }
         }
         h1 {
             font-size: 5rem;
-        }
-        .last-name {
-            padding-right: 1rem;
-            border-right: 5px solid var(--light);
-            animation:
-                cursor .4s step-end infinite alternate;
+            border-right: 5px solid;
+            animation: cursor 0.4s step-end infinite alternate;
         }
         h3 {
+            animation: expandSize 1s;
             font-weight: normal;
             span {
                 &:first-child {
@@ -88,6 +117,9 @@
                     color: var(--green-1);
                 }
             }
+        }
+        button {
+            animation: expandSize 1s;
         }
     }
     .lottie-container {
@@ -100,14 +132,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transform: scale(0.9);
         .lottie {
+            animation-name: expandSize;
+            animation-duration: 1s;
             width: 50vw;
         }
     }
 }
 
 @keyframes cursor {
-    50% {border-color: transparent}
+    50% {
+        border-color: transparent;
+    }
 }
 
 @keyframes iconSpin {
@@ -125,5 +162,17 @@
     }
     100% {
         transform: translateY(0px);
+    }
+}
+
+@keyframes expandSize {
+    0% {
+        transform: scale(0.1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
     }
 }

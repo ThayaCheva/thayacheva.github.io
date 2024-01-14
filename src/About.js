@@ -4,6 +4,7 @@ import PDF from './files/Thaya_Resume.pdf'
 function About() {
   return (
     <section id="about">
+      
         <div className="about-left">
             <div className="about-left-container">
                 <h2>THAYA CHEVAPHATRAKUL</h2>

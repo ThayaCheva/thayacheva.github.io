@@ -24,20 +24,14 @@
   place-items: center;
   padding: 2.5rem 15rem;
 }
-#project .project-container .slick-dots li.slick-active button:before {
-  color: var(--purple-1);
+#project .project-container .reveal {
+  opacity: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transform: translateY(50px);
 }
-#project .project-container .slick-slide {
-  position: relative;
-  transition: all 0.2s ease-in-out;
-}
-#project .project-container .slick-slide.slick-center {
-  transform: scale(1.1);
-}
-#project .project-container .nav-info {
-  color: #bbbbbb;
-  font-size: 0.8rem;
-  transform: translateY(30px);
+#project .project-container .active {
+  opacity: 1;
+  transform: translateY(0px);
 }
 #project .project-container .project-items {
   width: 35vw;
@@ -46,6 +40,18 @@
   position: relative;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#project .project-container .project-items:nth-child(1) {
+  transition-delay: 200ms;
+}
+#project .project-container .project-items:nth-child(2) {
+  transition-delay: 400ms;
+}
+#project .project-container .project-items:nth-child(3) {
+  transition-delay: 600ms;
+}
+#project .project-container .project-items:nth-child(4) {
+  transition-delay: 800ms;
 }
 #project .project-container .project-items .project-content {
   position: absolute;

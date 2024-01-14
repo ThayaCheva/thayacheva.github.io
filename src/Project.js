@@ -7,8 +7,8 @@ function Project() {
             <h1 className="section-header reveal">My <span>Projects</span></h1>
             <p className="section-description reveal">Explore a selection of my diverse past projects, each contributing to my skill set and professional growth.</p>
         </div>
-        <div className="project-container reveal">
-            <div className="project-items">
+        <div className="project-container">
+            <div className="project-items reveal">
                 <div className="project-content">
                     <h2>Lunala and the Celestial Tower</h2>
                     <h3>Game Development</h3>
@@ -20,7 +20,7 @@ function Project() {
                 </div>
                 <img src={require("./images/lunala.jpg")}></img>
             </div>
-            <div className="project-items">
+            <div className="project-items reveal">
                 <div className="project-content">
                     <h2>TextDNA</h2>
                     <h3>Full-Stack Web Development</h3>
@@ -32,7 +32,7 @@ function Project() {
                 </div>
                 <img src={require("./images/textdna.png")}></img>
             </div>
-            <div className="project-items">
+            <div className="project-items reveal">
                 <div className="project-content">
                     <h2>LastBite</h2>
                     <h3>Full-Stack Web Development</h3>
@@ -44,7 +44,7 @@ function Project() {
                 </div>
                 <img src={require("./images/lastbite.png")}></img>
             </div>
-            <div className="project-items">
+            <div className="project-items reveal">
                 <div className="project-content">
                     <h2>Abyss Guide</h2>
                     <h3>Front-End Web Development</h3>

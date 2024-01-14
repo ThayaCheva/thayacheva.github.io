@@ -7,15 +7,11 @@ nav {
     align-items: center;
     justify-content: flex-start;
     padding: 1.5rem 2.5rem;
-    // background: rgba(69, 69, 69, 0.5);
-    // backdrop-filter: blur(50px);
-    // opacity: 0;
     .nav-menu {
         width: 50%;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        // background: rgba(69, 69, 69, 0.4);
         padding: 1rem;
         border-radius: 50px;
         .nav-menu-container {
@@ -24,9 +20,48 @@ nav {
             align-items: center;
             justify-content: space-between;
             list-style: none;
-            li {
-                .active{
-                    position: relative;
+            .active{
+                position: relative;
+                &::before {
+                    opacity: 1;
+                    position: absolute;
+                    transform: translateY(30px);
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    background: var(--light);   
+                }
+            }
+            
+            a {
+                animation-name: dropdown;
+                &:nth-child(1) {
+                    animation-duration: 0.2s;
+                }
+                &:nth-child(2) {
+                    animation-duration: 0.4s;
+                }
+                &:nth-child(3) {
+                    animation-duration: 0.6s;
+                }
+                &:nth-child(4) {
+                    animation-duration: 0.8s;
+                }
+                position: relative;
+                color: var(--light);
+                text-decoration: none;
+                font-weight: bold;
+                transition: all 0.1s ease-in-out;
+                &::before {
+                    opacity: 0;
+                    position: absolute;
+                    transform: translateY(30px);
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                }
+                &:hover {
+                    // color: var(--blue-1);
                     &::before {
                         opacity: 1;
                         position: absolute;
@@ -34,35 +69,7 @@ nav {
                         content: '';
                         width: 100%;
                         height: 3px;
-                        background: var(--light);   
-                    }
-                }
-                
-                a {
-                    position: relative;
-                    color: var(--light);
-                    text-decoration: none;
-                    font-weight: bold;
-                    transition: all 0.1s ease-in-out;
-                    &::before {
-                        opacity: 0;
-                        position: absolute;
-                        transform: translateY(30px);
-                        content: '';
-                        width: 100%;
-                        height: 3px;
-                    }
-                    &:hover {
-                        color: var(--purple-1);
-                        &::before {
-                            opacity: 1;
-                            position: absolute;
-                            transform: translateY(30px);
-                            content: '';
-                            width: 100%;
-                            height: 3px;
-                            background: var(--purple-1);   
-                        }
+                        background: var(--blue-1);   
                     }
                 }
             }
