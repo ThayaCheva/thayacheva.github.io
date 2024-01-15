@@ -103,8 +103,9 @@
         }
         h1 {
             font-size: 5rem;
-            border-right: 5px solid;
-            animation: cursor 0.4s step-end infinite alternate;
+            animation: expandSize 1s;
+            font-family: OdorMeanChey;
+            font-weight: normal;
         }
         h3 {
             animation: expandSize 1s;

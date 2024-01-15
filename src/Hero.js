@@ -8,20 +8,6 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './css/footer.css';
 function Hero(props) {
-  const TypingAnimation = ({ text, speed }) => {
-    const [visibleChars, setVisibleChars] = React.useState(0);
-    React.useEffect(() => {
-        const intervalId = setInterval(() => {
-        setVisibleChars((prevVisibleChars) =>
-            prevVisibleChars < text.length ? prevVisibleChars + 1 : prevVisibleChars
-        );
-        }, speed);
-    
-        return () => clearInterval(intervalId);
-      }, [text, speed]);
-    return <h1>{text.slice(0, visibleChars)}</h1>;
-  };
-
   return (
     <section id="hero">
       <div className="social-media">
@@ -30,7 +16,7 @@ function Hero(props) {
           <a onClick={() => {navigator.clipboard.writeText("thayajjj@gmail.com"); props.manageAlert("Copied to clipboard!", "success");}}><FontAwesomeIcon className="icons" icon={faEnvelope} /></a>
       </div>
       <div className="header">
-        <TypingAnimation text={"THAYA CHEVAPHATRAKUL"} speed={60}/>
+        <h1>Thaya Chevaphatrakul</h1>
         <h3>DESIGNER <span>●</span> AND <span>●</span> DEVELOPER</h3>
         <a href={PDF} target="_blank">
           <button>MY RESUME</button>

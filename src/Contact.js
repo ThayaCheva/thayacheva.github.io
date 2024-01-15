@@ -9,12 +9,12 @@ function Contact(props) {
     const formData = new FormData(form.current)
     const message = formData.get('message')
     if (formData.get('from_name') !== "" || formData.get('user_email') !== "" || message !== "") {
-      props.manageAlert("Email Sent!", "success");
       emailjs.sendForm('service_ept4jrj', 'template_sgumv5d', form.current, 'yb111x2EbsSb6qXAr')
-        .then((result) => {
+      .then((result) => {
+              props.manageAlert("Email Sent!", "success");
               console.log(result.text);
-              console.log("message sent")
           }, (error) => {
+              props.manageAlert("Something went wrong", "fail");
               console.log(error.text);
         });
         form.current.reset();
