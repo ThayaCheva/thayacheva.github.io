@@ -1,12 +1,41 @@
 #about {
     width: 100%;
-    height: 34vw;
+    padding: 5rem 15rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    background: var(--light);
+    .title {
+        margin-bottom: 4rem;
+        span {
+            color: var(--blue-1);
+        }
+        &::before {
+            transform: translateY(3vw);
+        }
+    }
     .about-left {
-        padding: 4rem 10rem;
+        position: relative;
+        .aboutme {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            width: 100%;
+            height: 100%;
+            opacity: 5%;
+            font-size: 12vw;
+            line-height: 200px;
+        }
         .name-text {
-            margin-bottom: 2.5rem;
+            span {
+                color: var(--grey-2);
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+            margin-bottom: 2rem;
         }
         .about-left-container {
             text-align: left;
@@ -24,9 +53,67 @@
             a {
                 width: 85%;
             }
+            button {
+                margin-top: 2rem;
+                background: var(--blue-1);
+            }
         }
     }
-    .about-right {
-        background: var(--grey-light);
+    .about-right-container {
+        position: relative;
+        .about-right {
+            width: 100%;
+            // height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            .grid-item-container {
+                position: relative;
+                &:hover {
+                    h3 {
+                        opacity: 1;
+                    }
+                }
+                h3 {
+                    transition: all 0.1s ease;
+                    position: absolute;
+                    top: -20%;
+                    left: -10%;
+                    background: var(--light);
+                    border: 1px solid var(--grey-3);
+                    padding: 0.5rem 1rem;
+                    border-radius: 5px;
+                    font-size: 0.8rem;
+                    color: var(--grey-2);
+                    opacity: 0;
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 0.8vw;
+                        height: 0.8vw;
+                        bottom: -0.5vw;
+                        right: 1vw;
+                        border-right: 1px solid var(--grey-3);
+                        border-bottom: 1px solid var(--grey-3);
+                        background: var(--light);
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+            .grid-item {
+                border: 1px solid var(--grey-3);
+                width: 6vw;
+                height: 6vw;   
+                padding: 1rem;
+                border-radius: 5px;
+            }
+            @for $i from 1 through 16 {
+                .grid-item:nth-child(#{$i}) {
+                  transition-delay: 0.05s * $i;
+                }
+            }
+        }
     }
 }

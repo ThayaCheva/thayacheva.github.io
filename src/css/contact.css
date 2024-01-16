@@ -1,6 +1,6 @@
 #contact {
-  background: var(--grey-light);
-  padding: 5rem;
+  background: var(--light);
+  padding: 5rem 25rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -24,8 +24,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 47.5vw;
   margin-top: 2.5rem;
+  width: 100%;
 }
 #contact form label {
   text-align: left;
@@ -40,7 +40,7 @@
   border: 1px solid var(--grey-3);
   background: var(--grey-4);
   padding: 0.5rem 1rem;
-  width: 47.5vw;
+  width: 100%;
   font-size: 0.8rem;
   margin-bottom: 1rem;
 }

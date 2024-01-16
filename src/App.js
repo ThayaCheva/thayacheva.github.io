@@ -60,7 +60,7 @@ function App() {
       <Navbar/>
       <Hero manageAlert={manageAlert}/>
       <About/>
-      <Skills/>
+      {/* <Skills/> */}
       <Project/>
       <Contact manageAlert={manageAlert}/>
       <Footer manageAlert={manageAlert}/>

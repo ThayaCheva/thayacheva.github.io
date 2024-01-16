@@ -23,8 +23,8 @@ function Navbar() {
     <nav>
       <div className="nav-menu">
             <ul className="nav-menu-container">
+              <a className={activeSection === 'hero' ? 'active' : ''}href="#hero">HOME</a>
               <a className={activeSection === 'about' ? 'active' : ''}href="#about">ABOUT</a>
-              <a className={activeSection === 'skills' ? 'active' : ''}href="#skills">SKILLS</a>
               <a className={activeSection === 'project' ? 'active' : ''}href="#project">PROJECTS</a>
               <a className={activeSection === 'contact' ? 'active' : ''}href="#contact">CONTACT</a>
             </ul>
