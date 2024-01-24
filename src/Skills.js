@@ -1,64 +1,184 @@
-import React from 'react'
-import './css/skills.css';
+import React from "react";
+import "./css/skills.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faLaptopCode, faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCode,
+  faLaptopCode,
+  faScrewdriverWrench,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Skills() {
-
-    return (
+  const [skillType, setSkillType] = React.useState("Languages");
+  return (
     <section id="skills">
-        <div className="title reveal">
-            <h1 className="section-header">My <span>Skills</span></h1>
-            <p>A list of languages and tools I usually use or am familiar with.</p>
+      <div className="skills-container">
+        <div className="skills reveal">
+          <div className="skills-header">
+            <div className="btn-container">
+              <div className="tab-btns">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <a>
+                <button
+                  onClick={() => {
+                    setSkillType("Languages");
+                  }}
+                >
+                  Languages
+                </button>
+              </a>
+            </div>
+            <div className="btn-container">
+              <div className="tab-btns">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <a>
+                <button
+                  onClick={() => {
+                    setSkillType("Web");
+                  }}
+                >
+                  Web Dev
+                </button>
+              </a>
+            </div>
+            <div className="btn-container">
+              <div className="tab-btns">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <a>
+                <button
+                  onClick={() => {
+                    setSkillType("Tools");
+                  }}
+                >
+                  Tools
+                </button>
+              </a>
+            </div>
+          </div>
+          {skillType === "Languages" ? (
+            <div className="skills-item-container">
+              <div className="tab-btns">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div className="tab-bar">
+                <p>about.me/my-skills/languages</p>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/python-icon.png")} />
+                <h4>PYTHON</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/c-icon.png")} />
+                <h4>C</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/c-sharp-icon.png")} />
+                <h4>C#</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/java-icon.png")} />
+                <h4>JAVA</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/javascript-icon.png")} />
+                <h4>JAVASCRIPT</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/mysql-icon.png")} />
+                <h4>MYSQL</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/haskell-icon.png")} />
+                <h4>HASKELL</h4>
+              </div>
+            </div>
+          ) : (
+            <div></div>
+          )}
+          {skillType === "Web" ? (
+            <div className="skills-item-container">
+              <div className="tab-btns">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div className="tab-bar">
+                <p>about.me/my-skills/web-dev</p>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/html-icon.png")} />
+                <h4>HTML</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/css-icon.png")} />
+                <h4>CSS</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/sass-icon.png")} />
+                <h4>SASS</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/react-icon.png")} />
+                <h4>REACT</h4>
+              </div>
+            </div>
+          ) : (
+            <div></div>
+          )}
+          {skillType === "Tools" ? (
+            <div className="skills-item-container">
+              <div className="tab-btns">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div className="tab-bar">
+                <p>about.me/my-skills/tools</p>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/photoshop-icon.png")} />
+                <h4>PHOTOSHOP</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/after-effects-icon.png")} />
+                <h4>AFTER EFFECTS</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/unity-icon.png")} />
+                <h4>UNITY</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/figma-icon.png")} />
+                <h4>FIGMA</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/word-icon.png")} />
+                <h4>WORD</h4>
+              </div>
+              <div className="skills-item">
+                <img src={require("./images/icons/excel-icon.png")} />
+                <h4>EXCEL</h4>
+              </div>
+            </div>
+          ) : (
+            <div></div>
+          )}
         </div>
-        <div className="skills-container">
-            <div className="skills-box reveal">
-                <div className="icon-container">
-                    <FontAwesomeIcon className="icon" icon={faCode}/>
-                </div>
-                <h2>LANGUAGES</h2>
-                <div className="skills-items">
-                    <p>PYTHON</p>
-                    <p>C</p>
-                    <p>C#</p>
-                    <p>JAVA</p>
-                    <p>JAVASCRIPT</p>
-                    <p>SQL</p>
-                    <p>HASKELL</p>
-                </div>
-            </div>
-            <div className="skills-box reveal">
-                <div className="icon-container">
-                    <FontAwesomeIcon className="icon" icon={faLaptopCode}/>
-                </div>
-                <h2>WEB DEV</h2>
-                <div className="skills-items"> 
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>SCSS</p>
-                    <p>REACT</p>
-                    <p>NEXTJS</p>
-                </div>
-            </div>
-            <div className="skills-box reveal">
-                <div className="icon-container">
-                    <FontAwesomeIcon className="icon" icon={faScrewdriverWrench}/>
-                </div>
-                <h2>TOOLS</h2>
-                <div className="skills-items">
-                    <p>PHOTOSHOP</p>
-                    <p>AFTER EFFECTS</p>
-                    <p>WORD</p>
-                    <p>EXCEL</p>
-                    <p>FIGMA</p>
-                    <p>SAI2</p>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
   );
 }
 
-export default Skills
+export default Skills;

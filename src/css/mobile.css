@@ -1,0 +1,166 @@
+@media (max-width: 1025px) {
+  * {
+    line-height: 4rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  p,
+  button {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 4.5rem !important;
+  }
+  h3 {
+    font-size: 4rem;
+  }
+  button {
+    padding: 4rem !important;
+  }
+  .website-styling::before {
+    top: 5vw;
+  }
+  .tab-btns {
+    top: 2vw;
+  }
+  .tab-bar {
+    top: 0.75vw;
+  }
+  nav {
+    padding: 3rem 5rem !important;
+  }
+  nav h1 {
+    font-size: 2.5rem !important;
+  }
+  nav .nav-menu-container {
+    gap: 1rem !important;
+  }
+  nav a {
+    font-size: 1.5rem !important;
+  }
+  #hero {
+    margin: 0 10rem !important;
+  }
+  #hero .hero-container {
+    padding: 5rem !important;
+    padding-top: 10rem !important;
+    margin: 5rem 5rem 0 5rem;
+  }
+  #hero .hero-container .header {
+    gap: 4rem !important;
+  }
+  #hero .hero-container .header h1 {
+    font-size: 6vw !important;
+    line-height: 8vw !important;
+  }
+  #hero .hero-container .header p {
+    width: 90% !important;
+  }
+  #about {
+    margin: 5rem 10rem 0 10rem !important;
+  }
+  #about .about-me {
+    padding: 3rem !important;
+    padding-top: 9rem !important;
+    gap: 3rem !important;
+  }
+  #about .about-list ul {
+    transform: translateX(5vw) !important;
+  }
+  #skills {
+    margin: 5rem 10rem 0 10rem !important;
+  }
+  #skills .skills-header .btn-container::before {
+    top: 5vw !important;
+  }
+  #skills .skills-header .btn-container button {
+    height: 15vw !important;
+    font-size: 3rem !important;
+  }
+  #skills .skills-item-container {
+    padding: 5rem !important;
+    padding-top: 8rem !important;
+  }
+  #skills .skills-item-container::before {
+    top: 5vw !important;
+  }
+  #skills .skills-item-container .skills-item img {
+    width: 7vw !important;
+    height: 7vw !important;
+  }
+  #skills .skills-item-container .skills-item h4 {
+    font-size: 2rem !important;
+  }
+  .close-btn {
+    width: 100px !important;
+    height: 100px !important;
+    font-size: 5rem !important;
+  }
+  #project {
+    margin: 5rem 5rem !important;
+  }
+  #project .project-collage .project-collage-container {
+    width: 90% !important;
+  }
+  #project .project-container .project-items {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 3rem !important;
+    padding-top: 8rem !important;
+  }
+  #project .project-container .project-items::before {
+    top: 6vw !important;
+  }
+  #project .project-container .project-items .project-img-container .project-img {
+    width: 85vw !important;
+    height: 50vw !important;
+    margin-bottom: 2rem;
+  }
+  #project .project-container .project-items .project-content {
+    gap: 3rem !important;
+  }
+  #project .project-container .project-items .project-content .tech {
+    gap: 2rem !important;
+  }
+  #project .project-container .project-items .project-content .tech img {
+    width: 5vw !important;
+    height: 5vw !important;
+  }
+  #project .project-container .project-items .project-content .btn-container {
+    gap: 2rem !important;
+  }
+  #contact {
+    margin: 5rem 10rem 0 10rem !important;
+  }
+  #contact .contact-container {
+    padding: 5rem !important;
+    padding-top: 8rem !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }
+  #contact form {
+    justify-content: flex-start !important;
+  }
+  #contact form input,
+  #contact form textarea {
+    width: 30vw !important;
+    border-radius: 5px !important;
+    font-size: 2rem !important;
+  }
+  #contact form textarea {
+    height: 50% !important;
+    border-radius: 5px !important;
+  }
+  #contact h4 {
+    font-size: 1.5rem !important;
+  }
+  #footer {
+    padding: 4rem !important;
+    gap: 2rem !important;
+  }
+  #footer .social-media a {
+    width: 7vw !important;
+    height: 7vw !important;
+  }
+}/*# sourceMappingURL=mobile.css.map */

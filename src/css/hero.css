@@ -1,260 +1,92 @@
 #hero {
-  background: var(--dark);
-  width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
-}
-#hero .social-media {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 2rem;
-  padding: 2.5rem;
-}
-#hero .social-media a {
-  z-index: 999;
-  transition: all 0.2s ease;
-  animation-name: dropdown;
-  background: var(--grey-2);
-  width: 3.5vw;
-  height: 3.5vw;
-  color: var(--light);
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  flex-direction: column;
+  gap: 2rem;
+  border-bottom: 1px solid var(--grey-3);
+  margin: 0 20rem;
 }
-#hero .social-media a:hover {
-  transform: translateY(-10px);
+#hero .hero-container {
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem;
+  padding-top: 4vw;
+  margin: 5rem 20rem 0 20rem;
 }
-#hero .social-media a:hover .icons {
-  animation: iconSpin;
-  animation-duration: 1s;
-}
-#hero .social-media a::before {
-  position: absolute;
-  content: "";
-  -o-object-fit: center;
-     object-fit: center;
-  transform: translateY(2.5vw);
-  width: 3vw;
-  height: 0.3vw;
-}
-#hero .social-media a:first-child {
-  animation-duration: 1.2s;
-}
-#hero .social-media a:first-child::before {
-  background: var(--blue-1);
-}
-#hero .social-media a:first-child:hover {
-  background: var(--blue-1);
-}
-#hero .social-media a:nth-child(2) {
-  animation-duration: 1.4s;
-}
-#hero .social-media a:nth-child(2)::before {
-  background: var(--purple-1);
-}
-#hero .social-media a:nth-child(2):hover {
-  background: var(--purple-1);
-}
-#hero .social-media a:last-child {
-  animation-duration: 1.6s;
-}
-#hero .social-media a:last-child::before {
-  background: var(--green-1);
-}
-#hero .social-media a:last-child:hover {
-  background: var(--green-1);
-}
-#hero .social-media a .icons {
-  width: 50%;
-  height: 50%;
-  transition: all 0.1s ease-in-out;
-}
-#hero .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+#hero .hero-container .header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  color: var(--light);
+  color: var(--dark);
+  margin-top: 1rem;
+  gap: 1.5rem;
 }
-#hero .header a button {
+#hero .hero-container .header img {
+  width: 10vw;
+  height: 10vw;
+  border: 2px solid var(--grey-3);
+  border-radius: 50%;
+}
+#hero .hero-container .header a button {
   padding: 1rem;
-  margin-top: 2rem;
 }
-#hero .header h1 {
-  font-size: 5rem;
+#hero .hero-container .header h1 {
+  font-size: 2vw;
   animation: expandSize 1s;
-  font-family: OdorMeanChey;
-  font-weight: normal;
+  color: var(--dark);
 }
-#hero .header h3 {
-  animation: expandSize 1s;
-  font-weight: normal;
+#hero .hero-container .header p {
+  width: 70%;
 }
-#hero .header h3 span:first-child {
-  color: var(--blue-1);
-}
-#hero .header h3 span:last-child {
-  color: var(--green-1);
-}
-#hero .header button {
+#hero .hero-container .header button {
   animation: expandSize 1s;
 }
-#hero .lottie-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.25;
+#hero .scroll-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: scale(0.9);
+  flex-direction: column;
 }
-#hero .lottie-container .lottie {
-  animation-name: expandSize;
-  animation-duration: 1s;
-  width: 50vw;
+#hero .scroll-icon div {
+  margin-top: 1rem;
+  width: 25px;
+  height: 35px;
+  border-radius: 50px;
+  border: 3px solid var(--grey-1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
-#hero .cubes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-#hero .cubes div {
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 20px;
-  border: 10px solid var(--grey-2);
-  bottom: -150px;
-  animation: cube-animation 25s linear infinite;
-}
-#hero .cubes div:nth-child(1) {
-  left: -10%;
-  width: 400px;
-  height: 400px;
-  bottom: -400px;
-  border: 20px solid var(--grey-2);
-  animation-delay: 0s;
-}
-#hero .cubes div:nth-child(2) {
-  left: 5%;
-  width: 40px;
-  height: 40px;
-  border: 5px solid var(--grey-2);
-  animation-delay: 0.5s;
-  animation-duration: 12s;
-}
-#hero .cubes div:nth-child(3) {
-  left: 80%;
-  width: 80px;
-  height: 80px;
-  animation-delay: 1s;
-}
-#hero .cubes div:nth-child(4) {
-  left: 90%;
-  width: 400px;
-  height: 400px;
-  animation-delay: 3s;
-  animation-duration: 18s;
-}
-#hero .cubes div:nth-child(5) {
-  left: 85%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 3s;
-}
-#hero .cubes div:nth-child(6) {
-  left: 45%;
-  width: 10px;
-  height: 10px;
-  border: 3px solid var(--grey-2);
-  animation-delay: 5s;
-}
-#hero .cubes div:nth-child(7) {
-  left: 60%;
-  width: 30px;
-  height: 30px;
-  border: 3px solid var(--grey-2);
-  animation-delay: 1s;
-}
-#hero .cubes div:nth-child(8) {
-  left: 70%;
-  width: 40px;
-  height: 40px;
-  border: 3px solid var(--grey-2);
-  animation-delay: 3.5s;
-}
-#hero .cubes div:nth-child(9) {
-  left: 30%;
-  width: 10px;
-  height: 10px;
-  border: 3px solid var(--grey-2);
-  animation-delay: 0s;
-}
-#hero .cubes div:nth-child(10) {
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  border: 3px solid var(--grey-2);
-  animation-delay: 2s;
+#hero .scroll-icon div div {
+  margin-top: 0.5rem;
+  width: 8px;
+  height: 8px;
+  background: var(--grey-1);
+  animation: mouse 2s infinite;
 }
 
-@keyframes cube-animation {
-  0% {
-    opacity: 1;
-    border-radius: 0;
-    transform: translateY(0) rotate(0deg);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-1000px) rotate(720deg);
-  }
-}
-@keyframes cursor {
-  50% {
-    border-color: transparent;
-  }
-}
-@keyframes iconSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(360deg);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
+@keyframes mouse {
   80% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0px);
+    transform: translateY(0.5vw);
   }
 }
-@keyframes expandSize {
+@keyframes cube-rotate {
   0% {
-    transform: scale(0.1);
-  }
-  50% {
-    transform: scale(1.1);
+    transform: rotate(0);
   }
   100% {
-    transform: scale(1);
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=hero.css.map */
