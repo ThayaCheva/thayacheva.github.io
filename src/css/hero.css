@@ -45,8 +45,12 @@
   animation: expandSize 1s;
   color: var(--dark);
 }
+#hero .hero-container .header h3 {
+  animation: expandSize 1s;
+}
 #hero .hero-container .header p {
   width: 70%;
+  animation: expandSize 1s;
 }
 #hero .hero-container .header button {
   animation: expandSize 1s;
@@ -56,6 +60,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  animation: expandSize 1s;
 }
 #hero .scroll-icon div {
   margin-top: 1rem;
