@@ -20,11 +20,16 @@
   }
   .website-styling {
     &::before {
-      top: 5vw;
+      top: 6.25vw;
     }
   }
   .tab-btns {
-    top: 2vw;
+    top: 2.5vw;
+    left: 2.5vw;
+    div {
+      width: 1.5vw !important;
+      height: 1.5vw !important;
+    }
   }
   .tab-bar {
     top: 0.75vw;
@@ -78,6 +83,9 @@
     margin: 5rem 10rem 0 10rem !important;
     .skills-header {
       .btn-container {
+        .tab-btns {
+          top: 2vw !important;
+        }
         &::before {
           top: 5vw !important;
         }
@@ -91,9 +99,10 @@
       padding: 5rem !important;
       padding-top: 8rem !important;
       &::before {
-        top: 5vw !important;
+        top: 6vw !important;
       }
       .skills-item {
+        margin-top: 3rem !important;
         img {
           width: 7vw !important ;
           height: 7vw !important;
@@ -154,14 +163,21 @@
     margin: 5rem 10rem 0 10rem !important;
     .contact-container {
       padding: 5rem !important;
-      padding-top: 8rem !important;
+      padding-top: 10rem !important;
       display: grid !important;
       grid-template-columns: 1fr 1fr;
+      p {
+        font-size: 2.5rem !important;
+      }
+      img {
+        width: 90% !important;
+      }
     }
     form {
-      justify-content: flex-start !important;
+      justify-content: space-between !important;
       input,
-      textarea {
+      textarea,
+      .submit-btn {
         width: 30vw !important;
         border-radius: 5px !important;
         font-size: 2rem !important;
@@ -169,6 +185,9 @@
       textarea {
         height: 50% !important;
         border-radius: 5px !important;
+      }
+      .submit-btn {
+        transform: translateX(-6%) !important;
       }
     }
     h4 {

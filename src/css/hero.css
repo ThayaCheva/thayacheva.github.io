@@ -1,14 +1,14 @@
 #hero {
-  height: 100vh;
+  margin: 5rem 20rem 0 20rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--grey-3);
   position: relative;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
-  border-bottom: 1px solid var(--grey-3);
-  margin: 0 20rem;
+  height: 90vh;
 }
 #hero .hero-container {
   border-radius: 15px;
@@ -20,6 +20,7 @@
   padding: 1rem;
   padding-top: 4vw;
   margin: 5rem 20rem 0 20rem;
+  animation: expandSize 1s;
 }
 #hero .hero-container .header {
   display: flex;
@@ -80,11 +81,12 @@
   height: 8px;
   background: var(--grey-1);
   animation: mouse 2s infinite;
+  transform: translateX(-2.5%);
 }
 
 @keyframes mouse {
   80% {
-    transform: translateY(0.5vw);
+    transform: translateY(50%) translateX(-2.5%);
   }
 }
 @keyframes cube-rotate {
