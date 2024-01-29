@@ -21,10 +21,6 @@ function Project() {
     speed: 500,
   };
 
-  var collageSettings = {
-    arrow: false,
-  };
-
   function handleResize() {
     if (window.innerWidth <= 1024) {
       settings = {
@@ -48,7 +44,7 @@ function Project() {
         <div className="project-collage">
           <div className="project-collage-container">
             {showCarousel.project === "Lunala and the Celestial Tower" && (
-              <Slider settings={collageSettings}>
+              <Slider settings={{ dots: true }}>
                 <img src={require("./images/lunala.jpg")}></img>
                 <img src={require("./images/lunala-imgs/pic-1.png")}></img>
                 <img src={require("./images/lunala-imgs/pic-2.png")}></img>
@@ -59,7 +55,7 @@ function Project() {
               </Slider>
             )}
             {showCarousel.project === "TextDNA" && (
-              <Slider settings={collageSettings}>
+              <Slider settings={{ dots: true }}>
                 <img src={require("./images/textdna.png")}></img>
                 <img src={require("./images/textdna-imgs/pic-1.png")}></img>
                 <img src={require("./images/textdna-imgs/pic-2.png")}></img>
@@ -71,7 +67,7 @@ function Project() {
               </Slider>
             )}
             {showCarousel.project === "LastBite" && (
-              <Slider settings={collageSettings}>
+              <Slider settings={{ dots: true }}>
                 <img src={require("./images/lastbite.png")}></img>
                 <img src={require("./images/lastbite-imgs/pic-1.png")}></img>
                 <img src={require("./images/lastbite-imgs/pic-2.png")}></img>
@@ -81,12 +77,13 @@ function Project() {
               </Slider>
             )}
             {showCarousel.project === "AbyssGuide" && (
-              <Slider settings={collageSettings}>
+              <Slider settings={{ dots: true }}>
                 <img src={require("./images/abyss-imgs/pic-1.png")}></img>
                 <img src={require("./images/abyss-imgs/pic-2.png")}></img>
                 <img src={require("./images/abyss-imgs/pic-3.png")}></img>
               </Slider>
             )}
+            <p>Swipe or use arrow keys to navigate</p>
           </div>
           <button
             className="close-btn"

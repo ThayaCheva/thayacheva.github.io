@@ -39,6 +39,7 @@ function Contact(props) {
       props.manageAlert("Fill in fields", "fail");
     }
   };
+
   return (
     <section id="contact">
       <div className="contact-container website-styling reveal">
@@ -50,16 +51,18 @@ function Contact(props) {
         <div className="tab-bar">
           <p>contact.me</p>
         </div>
-        <div className="contact-header">
-          <h2 className="">
-            Contact <span>Me</span>
-          </h2>
-          <p className="">
-            Interested in collaborating with me? Get in touch by filling in the
-            form or through my social medias
-          </p>
-          <img src={require("./images/icons/email-icon.PNG")}></img>
-        </div>
+        {window.innerWidth >= 1024 && (
+          <div className="contact-header">
+            <h2 className="">
+              Contact <span>Me</span>
+            </h2>
+            <p className="">
+              Interested in collaborating with me? Get in touch by filling in
+              the form or through my social medias
+            </p>
+            <img src={require("./images/icons/email-icon.PNG")}></img>
+          </div>
+        )}
         <form className="reveal" ref={form} onSubmit={sendEmail}>
           <input
             className="reveal"

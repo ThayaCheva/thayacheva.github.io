@@ -48,9 +48,10 @@
   }
   #hero {
     margin: 0 10rem !important;
+    height: 100vh !important;
     .hero-container {
       padding: 5rem !important;
-      padding-top: 10rem !important;
+      padding-top: 12rem !important;
       margin: 5rem 5rem 0 5rem;
       .header {
         gap: 4rem !important;
@@ -62,6 +63,9 @@
           width: 90% !important;
         }
       }
+    }
+    .scroll-icon {
+      transform: translateY(100%) !important;
     }
   }
 
@@ -125,6 +129,10 @@
       .project-collage-container {
         width: 90% !important;
       }
+      .slick-prev,
+      .slick-next {
+        display: none !important;
+      }
     }
     .project-container {
       .project-items {
@@ -164,8 +172,9 @@
     .contact-container {
       padding: 5rem !important;
       padding-top: 10rem !important;
-      display: grid !important;
-      grid-template-columns: 1fr 1fr;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
       p {
         font-size: 2.5rem !important;
       }
@@ -175,19 +184,17 @@
     }
     form {
       justify-content: space-between !important;
+      gap: 2rem !important;
       input,
       textarea,
       .submit-btn {
-        width: 30vw !important;
+        width: 100% !important;
         border-radius: 5px !important;
         font-size: 2rem !important;
       }
       textarea {
-        height: 50% !important;
+        height: 25vw !important;
         border-radius: 5px !important;
-      }
-      .submit-btn {
-        transform: translateX(-6%) !important;
       }
     }
     h4 {

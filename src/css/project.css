@@ -38,6 +38,9 @@
   opacity: 1;
   cursor: pointer;
 }
+#project .project-collage p {
+  color: var(--light);
+}
 #project .project-slider-container .slick-dots li.slick-active button:before {
   color: var(--purple-1);
 }

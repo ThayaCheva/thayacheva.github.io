@@ -36,6 +36,9 @@
       opacity: 1;
       cursor: pointer;
     }
+    p {
+      color: var(--light);
+    }
   }
   .project-slider-container {
     .slick-dots li.slick-active button:before {

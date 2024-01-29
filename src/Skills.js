@@ -2,12 +2,6 @@ import React from "react";
 import "./css/skills.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCode,
-  faLaptopCode,
-  faScrewdriverWrench,
-} from "@fortawesome/free-solid-svg-icons";
 
 function Skills() {
   const [skillType, setSkillType] = React.useState("Languages");
