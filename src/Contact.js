@@ -63,28 +63,21 @@ function Contact(props) {
             <img src={require("./images/icons/email-icon.PNG")}></img>
           </div>
         )}
-        <form className="reveal" ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail}>
           <input
-            className="reveal"
             type="text"
             name="from_name"
             required
             placeholder="Insert Full Name"
           />
           <input
-            className="reveal"
             type="email"
             name="user_email"
             required
             placeholder="Insert Email"
           />
-          <textarea
-            className="reveal"
-            name="message"
-            required
-            placeholder="Insert You Message"
-          />
-          <input className="submit-btn reveal" type="submit" value="SEND" />
+          <textarea name="message" required placeholder="Insert You Message" />
+          <input className="submit-btn" type="submit" value="SEND" />
         </form>
       </div>
     </section>

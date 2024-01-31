@@ -4,7 +4,7 @@ function About() {
   return (
     <section id="about">
       <div className="reveal about-container website-styling">
-        <div className="about-me reveal">
+        <div className="about-me">
           <div className="tab-btns">
             <div></div>
             <div></div>
@@ -13,8 +13,8 @@ function About() {
           <div className="tab-bar">
             <p>about.me</p>
           </div>
-          <h1 className="reveal">Get to Know Me!</h1>
-          <p className="reveal">
+          <h1>Get to Know Me!</h1>
+          <p>
             {" "}
             I really enjoy working on Front-End design and development but I
             also like to branch out and learn new things as well. I've worked on
@@ -22,11 +22,9 @@ function About() {
           </p>
           <div className="about-list">
             <ul>
-              <p className="reveal">🏛️Education: University of Melbourne</p>
-              <p className="reveal">
-                👩🏻‍🎓Degree: Computer Science, Bachelor of Science
-              </p>
-              <p className="reveal">🌍Nationality: Thai</p>
+              <p>🏛️Education: University of Melbourne</p>
+              <p>👩🏻‍🎓Degree: Computer Science, Bachelor of Science</p>
+              <p>🌍Nationality: Thai</p>
             </ul>
           </div>
           <p>

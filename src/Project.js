@@ -94,7 +94,7 @@ function Project() {
         </div>
       )}
       <Context.Provider value={[showCarousel, setShowCarousel]}>
-        <div className="project-slider-container">
+        <div className="project-slider-container reveal">
           <Slider {...settings}>
             <ProjectItem
               tabHeader="projects.dev/lunala"

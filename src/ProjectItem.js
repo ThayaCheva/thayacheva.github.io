@@ -8,7 +8,7 @@ function ProjectItem(props) {
   const [showCarousel, setShowCarousel] = React.useContext(Context);
   return (
     <div className="project-container">
-      <div className="project-items reveal">
+      <div className="project-items">
         <div className="tab-btns">
           <div></div>
           <div></div>
