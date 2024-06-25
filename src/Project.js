@@ -3,6 +3,8 @@ import "./css/project.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 import ProjectItem from "./ProjectItem.js";
 export const Context = React.createContext();
 function Project() {
@@ -83,13 +85,21 @@ function Project() {
                 <img src={require("./images/abyss-imgs/pic-3.png")}></img>
               </Slider>
             )}
+            {showCarousel.project === "Task Manager" && (
+              <Slider settings={{ dots: true }}>
+                <img src={require("./images/task-imgs/img1.png")}></img>
+                <img src={require("./images/task-imgs/img2.png")}></img>
+                <img src={require("./images/task-imgs/img3.png")}></img>
+                <img src={require("./images/task-imgs/img4.png")}></img>
+              </Slider>
+            )}
             <p>Swipe or use arrow keys to navigate</p>
           </div>
           <button
             className="close-btn"
             onClick={() => setShowCarousel({ state: false, project: "" })}
           >
-            X
+            <FontAwesomeIcon icon={faXmark} />
           </button>
         </div>
       )}
@@ -150,6 +160,16 @@ function Project() {
               demo="https://thayacheva.github.io/AbyssGuide"
               code="https://github.com/ThayaCheva/AbyssGuide"
               image="abyss-imgs/pic-1.png"
+              tech={["html-icon.png", "css-icon.png"]}
+            />
+            <ProjectItem
+              tabHeader="projects.dev/task-manager"
+              title="Task Manager"
+              type="Full-Stack Web Development"
+              desc={`A MERN stack website built using CRUD operation for managing daily or other tasks.`}
+              demo="https://thayacheva.github.io/AbyssGuide"
+              code="https://github.com/ThayaCheva/Task-Manager"
+              image="task-imgs/img1.png"
               tech={["react-icon.png", "sass-icon.png", "node-js-icon.png"]}
             />
           </Slider>

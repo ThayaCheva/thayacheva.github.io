@@ -17,6 +17,7 @@
       border-radius: 5px;
     }
   }
+  // View the images for the project
   .project-collage {
     position: fixed;
     top: 0;
@@ -58,13 +59,15 @@
       cursor: default;
     }
   }
+
+  // The project items
   .project-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
-
+    margin: 0;
     .project-items {
       display: flex;
       justify-content: center;

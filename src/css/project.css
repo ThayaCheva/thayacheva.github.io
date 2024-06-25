@@ -63,6 +63,7 @@
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
+  margin: 0;
 }
 #project .project-container .project-items {
   display: flex;
